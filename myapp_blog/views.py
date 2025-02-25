@@ -9,6 +9,9 @@ from django.contrib.auth.models import User
 from django.views import View
 # Create your views here.
 
+def index_view(request):
+    return render(request, 'myapp_blog/index.html')
+
 def register_view(request):
     if request.method == 'POST':
         form = RegisterForm(request.POST)
