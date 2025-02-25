@@ -7,14 +7,12 @@
     <link rel="stylesheet" href="{% static 'styles/style.css' %}">
 </head>
 <body>
-    <h1>Tours</h1>   
-    <h2>Here are the tours</h2>
-    {% for tour in tours %}
-        <ul>
-           <li>{{ tour}}</li>
-        </ul>
-    {% endfor %}
-    <img src="{% static 'images/chelsea.png' %}" alt="Tour">
+    <div class="centered-content">
+        <img src="{% static 'images/chelsea.png' %}" alt="Tour">
+        <form action="{% url 'contact' %}" method="get">
+            <button type="submit">Click to Enter Form</button>
+        </form>
+    </div>
     <script src="{% static 'js/script.js' %}"></script>
 </body>
 </html>
